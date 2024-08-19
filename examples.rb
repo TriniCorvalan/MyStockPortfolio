@@ -43,3 +43,35 @@ puts "Profit: #{result[:profit]}"
 puts "Annualized Return: #{(result[:annualized_return] * 100).round(2)}%"
 puts "Diversification start date: #{JSON.pretty_generate(result[:diversification][:start_date])}"
 puts "Diversification end date: #{JSON.pretty_generate(result[:diversification][:end_date])}"
+
+# # expected results:
+# Profit: 50.0
+# Annualized Return: 6.5%
+# Diversification start date: {
+#   "Information Technology": {
+#     "percentage": 58.44,
+#     "count": 2
+#   },
+#   "Financial Services": {
+#     "percentage": 20.78,
+#     "count": 1
+#   },
+#   "Energy": {
+#     "percentage": 20.78,
+#     "count": 1
+#   }
+# }
+# Diversification end date: {
+#   "Information Technology": {
+#     "percentage": 59.76,
+#     "count": 2
+#   },
+#   "Financial Services": {
+#     "percentage": 20.12,
+#     "count": 1
+#   },
+#   "Energy": {
+#     "percentage": 20.12,
+#     "count": 1
+#   }
+# }
